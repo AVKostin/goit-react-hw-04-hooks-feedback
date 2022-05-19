@@ -5,7 +5,7 @@ import Statistics from '../Statistics/Statistics';
 import Feedback from '../Feedback/Feedback';
 import Notification from '../Notification/Notification';
 
-const App = () => {
+export default function App () {
   const [good, setGood] = useState(0);
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
@@ -61,11 +61,9 @@ const App = () => {
             positivePercentage={positiveFeedBack}
           />
         ) : (
-          <Notification message="There is no feedback" />
+          <Notification message="No feedback given" />
         )}
       </Section>
     </Wrapper>
   );
 };
-
-export default App;
